@@ -550,6 +550,17 @@ names to which it refers are bound."
 ;;;;;;; mode-line
       (mode-line (:foreground ,fg-dim :background ,bg-m3))
       (mode-line-inactive (:foreground ,nontext :background ,bg-m3))
+;;;;;;; tab-bar
+      (tab-bar (:foreground ,fg :background ,bg-m3))
+      (tab-bar-tab (:inherit bold  :foreground ,fg-dim  :background ,bg))
+      (tab-bar-tab-inactive (:foreground ,fg :background ,bg-m3))
+      (tab-bar-tab-ungrouped (:inherit tab-bar-tab-inactive))
+      (tab-bar-tab-highlight (:inherit highlight))
+
+      ;; TODO: Learn how tab groups work before attempting to change these
+      ;; (tab-bar-tab-group-current (:inherit bold :foreground ,fg :background ,tab-current-bg))
+      ;; (tab-bar-tab-group-inactive (:background ,bg-m3))
+
 ;;;;;;; hl-line-mode
       (hl-line (:background ,bg-p2))
 ;;;;;;; message
